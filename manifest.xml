@@ -12,7 +12,7 @@
   <HighResolutionIconUrl DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/icon-80.png"/>
   <SupportUrl DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/README.html"/>
   <AppDomains>
-    <AppDomain>https://yuridelestro-collab.github.io/compor-glass-excel</AppDomain>
+    <AppDomain>https://yuridelestro-collab.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
