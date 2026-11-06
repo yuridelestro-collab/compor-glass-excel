@@ -3,11 +3,11 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:type="TaskPaneApp">
   <Id>639093c0-2389-4ca4-bc6d-67cd02ea668a</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.1.0.0</Version>
   <ProviderName>Compor Glass</ProviderName>
   <DefaultLocale>pt-BR</DefaultLocale>
   <DisplayName DefaultValue="Compor Glass – Limpar Cores"/>
-  <Description DefaultValue="Remove o preenchimento e define a fonte preta nas células selecionadas."/>
+  <Description DefaultValue="Limpa o preenchimento e define a fonte preta nas células selecionadas."/>
   <IconUrl DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/icon-80.png"/>
   <SupportUrl DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/README.html"/>
@@ -21,4 +21,60 @@
     <SourceLocation DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+                    xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <FunctionFile resid="Commands.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="ComporGlass.Group">
+                <Label resid="Group.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16"/>
+                  <bt:Image size="32" resid="Icon.32"/>
+                  <bt:Image size="80" resid="Icon.80"/>
+                </Icon>
+                <Control xsi:type="Button" id="ComporGlass.ClearColors">
+                  <Label resid="Button.Label"/>
+                  <Supertip>
+                    <Title resid="Button.Label"/>
+                    <Description resid="Button.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16"/>
+                    <bt:Image size="32" resid="Icon.32"/>
+                    <bt:Image size="80" resid="Icon.80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>clearColors</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16" DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/icon-16.png"/>
+        <bt:Image id="Icon.32" DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/icon-32.png"/>
+        <bt:Image id="Icon.80" DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Commands.Url" DefaultValue="https://yuridelestro-collab.github.io/compor-glass-excel/functionfile.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Group.Label" DefaultValue="Compor Glass"/>
+        <bt:String id="Button.Label" DefaultValue="Limpar Cores"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Button.Tooltip" DefaultValue="Remove o preenchimento e define a cor da fonte como preta nas células selecionadas, preservando as demais formatações."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
 </OfficeApp>

@@ -1,21 +1,15 @@
-# Compor Glass – Limpar Cores
+# Compor Glass – Limpar Cores (versão com botão na faixa)
 
-Suplemento do Excel para limpar as cores da seleção atual.
+Esta versão adiciona um grupo **Compor Glass** à guia **Início** do Excel e um botão **Limpar Cores** que atua diretamente na seleção, sem abrir o painel lateral.
 
 ## Arquivos
-- `manifest.xml`: arquivo para carregar no Excel Online.
-- `taskpane.html`: painel com o botão que executa a ação.
+- `manifest.xml`: manifesto atualizado (versão 1.1.0.0).
+- `functionfile.html` e `commands.js`: comando executado pelo botão da faixa.
+- `icon-16.png`, `icon-32.png`, `icon-80.png`: ícones do botão.
+- `taskpane.html`: painel lateral anterior, mantido como alternativa.
+- `README.html` e `README.md`: informações do suplemento.
 
 ## Publicação
-Este suplemento foi configurado para o GitHub Pages deste repositório:
-https://yuridelestro-collab.github.io/compor-glass-excel
+Repositório: https://yuridelestro-collab.github.io/compor-glass-excel
 
-Depois de publicar o GitHub Pages, abra os endereços abaixo para confirmar que estão acessíveis:
-- https://yuridelestro-collab.github.io/compor-glass-excel/taskpane.html
-- https://yuridelestro-collab.github.io/compor-glass-excel/manifest.xml
-
-No Excel Online, use **Início > Suplementos > Mais Suplementos > Meus Suplementos > Carregar Meu Suplemento** (os nomes podem variar) e selecione `manifest.xml`.
-
-O painel do suplemento terá o botão **Limpar cores da seleção**. Selecione as células na planilha antes de clicar.
-
-O código altera somente o preenchimento e a cor da fonte.
+No GitHub, substitua os arquivos existentes e adicione os novos arquivos. Depois, no Excel, remova a instalação anterior do suplemento e carregue novamente o novo `manifest.xml` para atualizar os comandos da faixa.
